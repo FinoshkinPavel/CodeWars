@@ -1,22 +1,28 @@
 function palindrome(num) {
     let a = String(num).split('').reverse().join('');
-    if (Number(a) === num) return true;
+    if (num < 0) return "Not valid";
+    if (typeof (num) !== Number ) return "Not valid";
     if (Number(a) !== num) return false;
-    if (String(num)) return "Not valid";
-    if (-num) return "Not valid";
+    if (Number(a) === num) return true;
+  
 }
 
-console.log(palindrome(123322));
+//console.log(1221< 0)
 
-//palindrome(1221),true
-//palindrome(123322),false
-//palindrome("ACCDDCCA"),"Not valid"
-//palindrome("1221"),"Not valid"
-//palindrome(-450),"Not valid"
+console.log(palindrome(1221));//,true
+console.log(palindrome(123322));//,false
+console.log(palindrome("ACCDDCCA"));//,"Not valid"
+console.log(palindrome("1221"));//,"Not valid"
+console.log(palindrome(-450));//,"Not valid"
 
-let num = 1221;
-let a = String(num).split('').reverse().join('');
-//console.log(Number(a))
+let num = "ACCDDCCA";
+console.log(typeof(num))
+if(typeof(num) !== Number){
+    console.log('ya')
+} else {
+    console.log('no')
+}
+
 
 
 let c ='asfasf';
